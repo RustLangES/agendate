@@ -12,11 +12,15 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
+    "@primevue/themes": "^4.0.4",
     "nuxt": "^3.12.4",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.0.4",
     "vue": "latest"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240806.0",
+    "@primevue/nuxt-module": "^4.0.4",
     "nitro-cloudflare-dev": "^0.1.6",
     "wrangler": "^3.69.1"
   }
