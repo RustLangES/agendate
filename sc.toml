@@ -10,6 +10,9 @@ description = "Related to manifests of configurations"
 name = "nix"
 description = "Nix files related"
 
+[[scopes]]
+name = "deps"
+
 [git]
 skip_preview = true
 skip_emojis = true
