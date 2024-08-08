@@ -1,0 +1,10 @@
+[[scopes]]
+name = "build"
+description = "Build related changes"
+
+[[scopes]]
+name = "manifests"
+
+[git]
+skip_preview = true
+skip_emojis = true
