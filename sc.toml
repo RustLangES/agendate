@@ -4,6 +4,11 @@ description = "Build related changes"
 
 [[scopes]]
 name = "manifests"
+description = "Related to manifests of configurations"
+
+[[scopes]]
+name = "nix"
+description = "Nix files related"
 
 [git]
 skip_preview = true
