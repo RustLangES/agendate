@@ -11,6 +11,18 @@ name = "nix"
 description = "Nix files related"
 
 [[scopes]]
+name = "ui"
+description = "Simple ui changes"
+
+[[scopes]]
+name = "database"
+description = "Database related changes"
+
+[[scopes]]
+name = "api"
+description = "Api and db interaction related changes"
+
+[[scopes]]
 name = "deps"
 
 [git]
