@@ -1,4 +1,31 @@
+import { definePreset } from '@primevue/themes';
 import Aura from '@primevue/themes/aura';
+
+const RustLangESPreset = definePreset(Aura, {
+  primitive: {
+    borderRadius: {
+      none: '0',
+      xs: '0',
+      sm: '0',
+      md: '0',
+      lg: '0',
+      xl: '0'
+    },
+  },
+  components: {
+    card: {
+      colorScheme: {
+        light: {
+          root: {
+            background: '{orange.50}',
+            color: '#000',
+          },
+          title: { color: '#000' },
+        },
+      }
+    }
+  }
+});
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -10,7 +37,7 @@ export default defineNuxtConfig({
     autoImport: true,
     options: {
       theme: {
-        preset: Aura,
+        preset: RustLangESPreset,
       }
     }
   },
