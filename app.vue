@@ -1,14 +1,6 @@
 <template>
-    <section class="container">
-        <Card class="card">
-            <template #content>
-            </template>
-        </Card>
-    </section>
+  <NuxtPage />
 </template>
-
-<script setup>
-</script>
 
 <style>
 html, body {
@@ -16,42 +8,39 @@ html, body {
   margin: 0;
 }
 
-* { color: black; }
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background: #FFEDD5;
+h1, h2, h3 {
+  font-family: Alfa Slab One, sans-serif;
+  letter-spacing: 0.06em;
 }
 
-.card {
-  background-color: #FDCE9A;
-  padding: 20px;
-  border-radius: 0px;
-  min-width: 100%;
+h4, h5, h6, span, a, ul {
+  font-family: Work Sans, sans-serif;
 }
 
-@media (min-width: 1024px) {
-  .card {
-    min-width: 900px;
-    max-width: 1060px;
-  }
+h1 {
+  font-size: 2.14em;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 1.42em;
+  margin-top: 1.6em;
+  margin-bottom: 0.8em;
+  line-height: 1.4;
+}
+h3 {
+  font-size: 1.28em;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+h4 {
+  margin-top: 1.42em;
+  margin-bottom: 0.57em;
+  line-height: 1.42;
 }
 
-@media not all and (min-width: 640px) {
-  .card {
-    max-width: 680px;
-  }
-}
-
-/*
-max-sm	@media not all and (min-width: 640px) { ... }
-max-md	@media not all and (min-width: 768px) { ... }
-max-lg	@media not all and (min-width: 1024px) { ... }
-max-xl	@media not all and (min-width: 1280px) { ... }
-max-2xl	@media not all and (min-width: 1536px) { ... }
-*/
+.title { color: var(--p-orange-500) }
+.text-center { text-align: center }
 </style>
