@@ -11,9 +11,6 @@
         <Skeleton width="10rem" height="4rem" />
         <Skeleton width="10rem" height="4rem" />
       </div>
-      <div v-else-if="data.forms.length() == 0">
-        <span>No hay Formularios</span>
-      </div>
       <ul v-else>
         <li v-for="form in data.forms" :key="form.id">
           {{form.title}}
