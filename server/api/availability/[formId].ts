@@ -1,9 +1,7 @@
-import { D1Database } from '@cloudflare/workers-types'
+export default defineEventHandler(async ({ context }) => {
+  const db = process.env.DB || context.cloudflare.env.DB
 
-export default defineEventHandler(async (event) => {
-  const { formId } = event.context.params as { formId: number }
-  const env = event.context.cloudflare.env as { DB: D1Database }
-  const db = env.DB
+  const { formId } = context.params as { formId: number }
 
   try {
     const { results: availabilities } = await db.prepare('SELECT * FROM availability WHERE form_id = ?').bind(parseInt(formId)).all()

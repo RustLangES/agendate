@@ -1,8 +1,5 @@
-import { D1Database } from '@cloudflare/workers-types'
-
-export default defineEventHandler(async (event) => {
-  const env = event.context.cloudflare.env as { DB: D1Database }
-  const db = env.DB
+export default defineEventHandler(async ({ context }) => {
+  const db = process.env.DB || context.cloudflare.env.DB
 
   try {
     const { results } = await db.prepare('SELECT * FROM forms').all()

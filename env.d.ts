@@ -1,11 +1,13 @@
-/// <reference types="@cloudflare/workers-types/2023-07-01" />
+import { CfProperties, Request, ExecutionContext, D1Database } from '@cloudflare/workers-types'
 
 declare module "h3" {
   interface H3EventContext {
     cf: CfProperties;
     cloudflare: {
       request: Request;
-      env: Env;
+      env: {
+        DB: D1Database,
+      };
       context: ExecutionContext;
     };
   }
