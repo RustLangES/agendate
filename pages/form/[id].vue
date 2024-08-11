@@ -1,13 +1,19 @@
 <template>
-    <section class="container">
-        <Card class="card">
-            <template #content>
-                <h1 v-if="data && data.form">
-                 {{data.form.title}}
-                </h1>
-            </template>
-        </Card>
-    </section>
+  <section class="container">
+    <Card class="card">
+    <template #title>
+      <h1 v-if="data && data.form" class="text-center">
+        {{data.form.title}}
+      </h1>
+      <h1 v-else class="text-center">No se encontro ningun Calendario</h1>
+    </template>
+    <template #content>
+      <div class="content-center">
+        <img class="ferris" v-if="!data || !data.form" src="/FerrisChambeador.png" />
+      </div>
+    </template>
+    </Card>
+  </section>
 </template>
 
 <script setup>
@@ -40,6 +46,8 @@ html, body {
   min-width: 100%;
 }
 
+.ferris { max-width: 500px; }
+
 @media (min-width: 1024px) {
   .card {
     min-width: 900px;
@@ -48,9 +56,8 @@ html, body {
 }
 
 @media not all and (min-width: 640px) {
-  .card {
-    max-width: 680px;
-  }
+  .card { max-width: 680px; }
+  .ferris { width: 100%; }
 }
 
 /*

@@ -50,6 +50,11 @@ ul {
 }
 .title { color: var(--p-orange-500) }
 .text-center { text-align: center }
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (min-width: 750px) { ul { grid-template-columns: repeat(3, 1fr); } }
 </style>
