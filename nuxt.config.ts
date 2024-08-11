@@ -30,16 +30,16 @@ const RustLangESPreset = definePreset(Aura, {
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
+  ssr: true,
   devtools: { enabled: true },
   modules: ["nitro-cloudflare-dev", "@primevue/nuxt-module"],
   primevue: {
-    // usePrimeVue: true,
-    autoImport: true,
+    autoImport: false,
     options: {
       theme: {
         preset: RustLangESPreset,
       }
-    }
+    },
   },
   nitro: {
     preset: "cloudflare-pages"
