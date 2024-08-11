@@ -12,9 +12,7 @@
         <Skeleton width="10rem" height="4rem" />
       </div>
       <ul v-else>
-        <li v-for="form in data.forms" :key="form.id">
-          {{form.title}}
-        </li>
+        <FormItem v-for="form in data.forms" :key="form.id" :form="form" />
       </ul>
     </template>
     </Card>
@@ -32,11 +30,10 @@ const { data, status } = await useAsyncData('getForms', async () => await $fetch
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background: #FFEDD5;
+  background: #fed7aa;
 }
 
 .card {
-  /* background-color: #FDCE9A; */
   padding: 20px;
   border-radius: 0px;
   min-width: 100%;

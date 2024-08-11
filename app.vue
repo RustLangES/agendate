@@ -3,7 +3,7 @@
 </template>
 
 <style>
-html, body {
+html, body, ul {
   border: 0;
   margin: 0;
 }
@@ -41,6 +41,15 @@ h4 {
   line-height: 1.42;
 }
 
+ul {
+  display: grid;
+  list-style: none;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2em;
+}
 .title { color: var(--p-orange-500) }
 .text-center { text-align: center }
+
+@media (min-width: 750px) { ul { grid-template-columns: repeat(3, 1fr); } }
 </style>

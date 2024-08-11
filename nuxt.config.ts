@@ -12,19 +12,59 @@ const RustLangESPreset = definePreset(Aura, {
       xl: '0'
     },
   },
+  semantic: {
+    primary: {
+      50: '{orange.50}',
+      100: '{orange.100}',
+      200: '{orange.200}',
+      300: '{orange.300}',
+      400: '{orange.400}',
+      500: '{orange.500}',
+      600: '{orange.600}',
+      700: '{orange.700}',
+      800: '{orange.800}',
+      900: '{orange.900}',
+      950: '{orange.950}'
+    },
+  },
   components: {
     card: {
+      root: {
+        background: '#fdba744d',
+        borderRadius: 0,
+        color: '#000',
+      },
+    },
+    button: {
+      border: { radius: 0, },
+      primary: {
+        color: '#000',
+        background: '{orange.100}',
+        hover: { background: '{orange.100}' }
+      },
       colorScheme: {
         light: {
           root: {
-            background: '{orange.50}',
-            color: '#000',
+            primary: {
+              background: '{orange.100}',
+              hoverBackground: '{orange.100}',
+              activeBackground: '{orange.100}',
+              borderColor: '{primary.color}',
+              hoverBorderColor: '{primary.hover.color}',
+              activeBorderColor: '{primary.active.color}',
+              color: '#000',
+              hoverColor: '#000',
+              activeColor: '#000',
+              focusRing: {
+                color: '{primary.color}',
+                shadow: 'none'
+              }
+            },
           },
-          title: { color: '#000' },
         },
-      }
-    }
-  }
+      },
+    },
+  },
 });
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
