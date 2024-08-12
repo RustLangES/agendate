@@ -2,7 +2,9 @@
   <NuxtPage />
 </template>
 
-<style>
+<style >
+@import url('primeicons/primeicons.css');
+
 html, body, ul {
   border: 0;
   margin: 0;
@@ -48,12 +50,25 @@ ul {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.2em;
 }
+
 .title { color: var(--p-orange-500) }
+.bold { font-weight: bold }
+.flex { display: flex; }
+.gap { gap: 8px; }
 .text-center { text-align: center }
 .content-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (min-width: 750px) { ul { grid-template-columns: repeat(3, 1fr); } }
