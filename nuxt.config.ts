@@ -105,6 +105,26 @@ const RustLangESPreset = definePreset(Aura, {
         light: button,
       },
     },
+    listbox: {
+      root: {
+        background: '#fdba744d',
+        disabledBackground: '#fdba744d',
+        borderColor: '#000',
+        hoverBorderColor: '#000',
+        focusBorderColor: '#000',
+        invalidBorderColor: '#000',
+        color: '#000',
+      },
+      option: {
+          focusBackground: '{orange.500}',
+          selectedBackground: '{orange.500}',
+          selectedFocusBackground: '{orange.500}',
+          color: '#000',
+          focusColor: '#000',
+          selectedColor: '#000',
+          selectedFocusColor: '#000',
+      },
+    },
   },
 });
 

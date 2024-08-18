@@ -28,8 +28,8 @@ const { data, status } = await useAsyncData('getForms', async () => await $fetch
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   background: #fed7aa;
 }
 
