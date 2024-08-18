@@ -7,10 +7,7 @@
  * @returns {string[]} Array de horarios disponibles en formato "HH:mm".
  */
 export default function getIntervals(start, end, duration, breakTime = 10) {
-  const result = [
-    { label: "am", items: [] },
-    { label: "pm", items: [] }
-  ];
+  const result = [ ];
 
   const today = new Date();
   const utcToday = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()));
@@ -30,15 +27,13 @@ export default function getIntervals(start, end, duration, breakTime = 10) {
   while (currentTime <= endTime) {
     // Convertir el tiempo UTC a tiempo local para el resultado
     const localTime = new Date(currentTime.toUTCString());
-    const timeString = localTime.toTimeString().slice(0, 8); // Formato HH:MM:SS
-    const isPM = localTime.getHours() >= 12;
-    const item = { value: timeString };
+    const timeString = localTime.toLocaleTimeString([], {
+      hourCycle: 'h23',
+      hour: '2-digit',
+      minute: '2-digit'
+    }); // Formato HH:MM
 
-    if (isPM) {
-      result[1].items.push(item);
-    } else {
-      result[0].items.push(item);
-    }
+    result.push({ value: timeString });
 
     // Avanzar el tiempo en UTC
     currentTime.setUTCMinutes(currentTime.getUTCMinutes() + duration + breakTime);
@@ -52,5 +47,5 @@ export default function getIntervals(start, end, duration, breakTime = 10) {
   }
 
   // Eliminar objetos vacíos
-  return result.filter(obj => obj.items.length > 0);
+  return result
 }
