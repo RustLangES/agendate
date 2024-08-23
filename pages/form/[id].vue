@@ -50,7 +50,23 @@
           </Listbox>
         </div>
         <div v-if="step === 1" class="column gap">
-          <span>Hola toy laburando</span>
+          <div class="flex column gap">
+            <label for="username">Nombre *</label>
+            <InputText id="username" v-model="name" required aria-describedby="name-help" />
+          </div>
+          <div class="flex column gap">
+            <label for="email">Correo *</label>
+            <InputText id="email" v-model="email" required aria-describedby="email-help" />
+          </div>
+          <div class="flex column gap">
+            <label for="guests">Invitados</label>
+            <Textarea id="guests" v-model="guests" autoResize rows="5" cols="30" />
+            <small id="username-help">Escribe un correo por linea con un maximo de 10 invitados adicionales.</small>
+          </div>
+          <div class="flex column gap">
+            <label for="more">Cuentanos mas de ti y el motivo de la reunion</label>
+            <Textarea id="more" v-model="moreDetails" autoResize rows="5" cols="30" />
+          </div>
         </div>
         </client-only>
       </section>
@@ -60,6 +76,7 @@
       <client-only>
       <div v-if="groupedAvailableTime && groupedAvailableTime.length > 0 && selectedTime" class="flex" style="justify-content:end;margin-top:1rem">
         <Button as="button" @click="nextStep">
+          <span v-if="">Continuar</span>
           <span>Continuar</span>
         </Button>
       </div>
@@ -77,6 +94,12 @@ const step = ref(0)
 const confirmedDate = ref()
 const selectedDate = ref()
 const selectedTime = ref()
+
+const name = ref()
+const email = ref()
+const guests = ref()
+const moreDetails = ref()
+
 const groupedAvailableTime = ref()
 const timeZoneName = new Intl.DateTimeFormat('es-ES', { timeStyle: 'full' })
   .formatToParts(today)

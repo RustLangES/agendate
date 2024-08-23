@@ -15,9 +15,11 @@ h1, h2, h3 {
   letter-spacing: 0.06em;
 }
 
-h4, h5, h6, span, a, ul {
+h4, h5, h6, span, a, ul, label, small {
   font-family: Work Sans, sans-serif;
 }
+
+small { color: #2d2d2d }
 
 h1 {
   font-size: 2.14em;
