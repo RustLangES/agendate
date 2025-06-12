@@ -1,16 +1,21 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "agendate"
-compatibility_date = "2024-08-06"
-pages_build_output_dir = "./dist"
+compatibility_date = "2025-06-10"
+main = "./.output/server/index.mjs"
+compatibility_flags = [
+  "nodejs_compat",
+  "no_nodejs_compat_v2"
+]
 
-# Automatically place your workloads in an optimal location to minimize latency.
-# If you are running back-end logic in a Pages Function, running it closer to your back-end infrastructure
-# rather than the end user may result in better performance.
-# Docs: https://developers.cloudflare.com/pages/functions/smart-placement/#smart-placement
-# [placement]
-# mode = "smart"
+[assets]
+directory = "./.output/public"
 
-# Docs: https://developers.cloudflare.com/pages/functions/bindings/#d1-databases
+[placement]
+mode = "smart"
+
+[observability]
+enabled = true
+
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "schedules"

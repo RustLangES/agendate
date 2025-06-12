@@ -130,7 +130,7 @@ const RustLangESPreset = definePreset(Aura, {
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: '2025-06-10',
   ssr: true,
   devtools: { enabled: true },
   modules: ["nitro-cloudflare-dev", "@primevue/nuxt-module"],
@@ -143,7 +143,11 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: "cloudflare-pages"
+    preset: "cloudflare_module",
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true
+    },
   },
   site: {
     url: 'https://agendate.rustlang-es.org',

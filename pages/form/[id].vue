@@ -76,7 +76,6 @@
       <client-only>
       <div v-if="groupedAvailableTime && groupedAvailableTime.length > 0 && selectedTime" class="flex" style="justify-content:end;margin-top:1rem">
         <Button as="button" @click="nextStep">
-          <span v-if="">Continuar</span>
           <span>Continuar</span>
         </Button>
       </div>
