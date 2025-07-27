@@ -39,3 +39,16 @@ CREATE INDEX idx_appointments_form_id ON appointments(form_id);
 CREATE INDEX idx_appointments_availability_id ON appointments(availability_id);
 CREATE INDEX idx_appointments_date ON appointments(appointment_date);
 -- CREATE INDEX idx_appointments_status ON appointments(status);
+
+-- TODO: Remove this
+INSERT INTO forms (title, description) VALUES ('formulario de prueba', 'Hola soy una descripcion');
+INSERT INTO forms (title, description, duration) VALUES ('Otro formulario de prueba', 'Hola soy otra descripcion', 20);
+
+INSERT INTO availability (form_id, day_of_week, start_time, end_time, email)
+  VALUES (1, 1, '08:00:00', '12:00:00', 'test@gmail.com');
+INSERT INTO availability (form_id, day_of_week, start_time, end_time, email)
+  VALUES (1, 4, '14:00:00', '18:00:00', 'prueba@gmail.com');
+INSERT INTO availability (form_id, day_of_week, start_time, end_time, email)
+  VALUES (2, 1, '09:30:00', '15:25:00', 'test@gmail.com');
+
+INSERT INTO appointments (form_id, availability_id, appointment_date, time) VALUES (1, 1, 1723507200000, '08:45:00');
