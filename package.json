@@ -22,6 +22,6 @@
     "@cloudflare/workers-types": "^4.20240806.0",
     "@primevue/nuxt-module": "^4.0.4",
     "nitro-cloudflare-dev": "^0.1.6",
-    "wrangler": "4.19.1"
+    "wrangler": "4.81.0"
   }
 }
