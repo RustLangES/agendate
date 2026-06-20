@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.0.4",
-    "nuxt": "^3.17",
+    "nuxt": "^3.21",
     "primeicons": "^7.0.0",
     "primevue": "^4.0.4",
     "vue": "latest"
