@@ -13,14 +13,14 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.0.4",
-    "nuxt": "^3.17",
+    "nuxt": "^3.21",
     "primeicons": "^7.0.0",
     "primevue": "^4.0.4",
     "vue": "latest"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240806.0",
-    "@primevue/nuxt-module": "^4.0.4",
+    "@primevue/nuxt-module": "^4.5.5",
     "nitro-cloudflare-dev": "^0.1.6",
     "wrangler": "4.81.0"
   }
